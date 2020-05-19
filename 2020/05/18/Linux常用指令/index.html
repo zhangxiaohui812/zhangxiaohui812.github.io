@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>试试 | Hexo</title>
+  <title>Linux常用指令 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="你好##哈哈试试怎么用的">
+  <meta name="description" content="Linux 常用指令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="试试">
-<meta property="og:url" content="http://yoursite.com/2020/05/18/%E8%AF%95%E8%AF%95/index.html">
+<meta property="og:title" content="Linux常用指令">
+<meta property="og:url" content="http://yoursite.com/2020/05/18/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="你好##哈哈试试怎么用的">
+<meta property="og:description" content="Linux 常用指令">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-18T15:03:41.977Z">
-<meta property="article:modified_time" content="2020-05-18T15:04:40.779Z">
+<meta property="article:modified_time" content="2020-05-19T08:58:15.646Z">
 <meta property="article:author" content="xiao hui">
 <meta name="twitter:card" content="summary">
   
@@ -156,19 +156,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-试试" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Linux常用指令" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      试试
+      Linux常用指令
     </h1>
   
 
         
-        <a href="/2020/05/18/%E8%AF%95%E8%AF%95/" class="archive-article-date">
+        <a href="/2020/05/18/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="archive-article-date">
   	<time datetime="2020-05-18T15:03:41.977Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
 </a>
         
@@ -176,7 +176,111 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1><p>##哈哈<br>试试怎么用的</p>
+        <h1 id="Linux-常用指令"><a href="#Linux-常用指令" class="headerlink" title="Linux 常用指令"></a>Linux 常用指令</h1><a id="more"></a>
+
+<h2 id="控制台入门"><a href="#控制台入门" class="headerlink" title="控制台入门"></a>控制台入门</h2><h3 id="运行命令"><a href="#运行命令" class="headerlink" title="运行命令"></a>运行命令</h3><ol>
+<li>ls : 列出目录内容<ul>
+<li>ls -l : 以长格式列出</li>
+<li>ls -a : 包括名称以 . 开头的目录条目</li>
+</ul>
+</li>
+<li>clear : 清除终端屏幕</li>
+</ol>
+<h3 id="在文件系统中移动"><a href="#在文件系统中移动" class="headerlink" title="在文件系统中移动"></a>在文件系统中移动</h3><ol>
+<li>cd 更改目录<ul>
+<li>cd .. 表示返回上级目录</li>
+<li>cd ../.. 表示返回上两级目录</li>
+</ul>
+</li>
+<li>pwd : 打印工作目录（可以看到里面都有什么文件）</li>
+</ol>
+<h3 id="读取文件"><a href="#读取文件" class="headerlink" title="读取文件"></a>读取文件</h3><ol>
+<li>less </li>
+<li>cat : 连接并打印文件</li>
+</ol>
+<h3 id="编辑文件"><a href="#编辑文件" class="headerlink" title="编辑文件"></a>编辑文件</h3><ol>
+<li>touch : 更改文件访问和修改时间</li>
+<li>nano : 是一个小型的，免费且友好的编辑器</li>
+<li>vim :<br> eg: vim 我的第一篇博客.md<br> 进去是命令模式，按下 i 进入输入模式，再按下 esc 退出输入模式回到命令模式，输入 ：wq 实现保存并退出 </li>
+<li>emacs</li>
+</ol>
+<h3 id="移动和删除文件"><a href="#移动和删除文件" class="headerlink" title="移动和删除文件"></a>移动和删除文件</h3><ol>
+<li>mv : 移动文件</li>
+<li>cp : 复制文件<ul>
+<li>-r 或 -R : 递归复制目录</li>
+</ul>
+</li>
+<li>rm : 删除文件<ul>
+<li>-r :递归删除目录及其内容</li>
+</ul>
+</li>
+<li>mkdir : 创建目录</li>
+</ol>
+<h3 id="如有任何问题"><a href="#如有任何问题" class="headerlink" title="如有任何问题"></a>如有任何问题</h3><p>man : 格式化并显示在线手册页</p>
+<h2 id="用户与权限"><a href="#用户与权限" class="headerlink" title="用户与权限"></a>用户与权限</h2><h3 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h3><ol>
+<li>whoami : 显示您是哪位用户</li>
+<li>adduser : 用于创建用户的交互式工具</li>
+<li>su ： 切换用户</li>
+<li>sudo : 以超级用户身份执行命令</li>
+</ol>
+<h3 id="文件权限"><a href="#文件权限" class="headerlink" title="文件权限"></a>文件权限</h3><p>chmod : 更改文件或目录的权限（模式）</p>
+<h3 id="文件所有权"><a href="#文件所有权" class="headerlink" title="文件所有权"></a>文件所有权</h3><p>chown : 更改文件或目录的所有者</p>
+<h3 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h3><ol>
+<li>sudo : 以超级用户身份执行命令</li>
+<li>sudo!! : 以超级用户身份执行前面的命令</li>
+</ol>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><ol>
+<li>top : 显示活动进程</li>
+<li>ps : 显示进程状态</li>
+<li>grep : 搜索模式</li>
+</ol>
+<h3 id="暂停和恢复"><a href="#暂停和恢复" class="headerlink" title="暂停和恢复"></a>暂停和恢复</h3><p>按键顺序</p>
+<ol>
+<li>ctrl + z : 终止（暂停）进程</li>
+<li>ctrl + c : 终止（退出）进程<br>指令</li>
+<li>fg : 将工作放在前台</li>
+<li>jobs : 列出您的会话的职位</li>
+</ol>
+<h3 id="杀死进程"><a href="#杀死进程" class="headerlink" title="杀死进程"></a>杀死进程</h3><p>kill : 向进程发送信号</p>
+<p>讯号：</p>
+<ol>
+<li>KILL 或 q : 强制进程退出</li>
+<li>TERM : 请求进程正常终止</li>
+<li>STOP : 停止或暂停进程</li>
+</ol>
+<h2 id="环境与定重向"><a href="#环境与定重向" class="headerlink" title="环境与定重向"></a>环境与定重向</h2><h3 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h3><ol>
+<li>VARIABLE = value : 设置本地环境变量</li>
+<li>export VARIABLE = value : 设置一个对子进程可见的环境变量</li>
+<li>env : 查看环境变量</li>
+<li>bash : 在当前会话中开始一个新会话</li>
+<li>echo : 显示发送给 echo 的参数</li>
+</ol>
+<h3 id="查找并复制"><a href="#查找并复制" class="headerlink" title="查找并复制"></a>查找并复制</h3><ol>
+<li>find. -name “search” : 查找名称搜索从您当前位置开始的文件</li>
+<li>grep “pattern” file : 查找给定文件包含模式的所有行</li>
+</ol>
+<h3 id="管道和重定向"><a href="#管道和重定向" class="headerlink" title="管道和重定向"></a>管道和重定向</h3><ol>
+<li>somecommand &lt; inputfile :<br> 使用来自 inputfile 而不是键盘的输入运行 somecommand</li>
+<li>comecommand &lt; outputfile :<br> 运行 somecommand ,将输出输出到 outputfile 而不是终端屏幕</li>
+<li>command1 | command2 :<br> 将 command1 的输出传递到 command2 的输入</li>
+</ol>
+<h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><h3 id="从源代码构建软件"><a href="#从源代码构建软件" class="headerlink" title="从源代码构建软件"></a>从源代码构建软件</h3><ol>
+<li>sudo apt-get update : 更新计算机上可用软件的目录</li>
+<li>sudo apt-get install build-essential : 安装从源代码构建软件所需的工具</li>
+<li>curl -O URL : 在 URL 上下载文件</li>
+<li>tar -xvf FILEMANE.tar.gz : 将 tar.gz 文件解压缩到当前目录</li>
+<li>./configure : 运行源代码所附的 configure 脚本，这会创建一个 Makefile</li>
+<li>make : 运行在 Makefile 中指定的架构</li>
+<li>sudo make install : 从 Makefile 运行安装脚本，这将安装程序</li>
+<li>which : 在用户路径中找到程序文件</li>
+</ol>
+<h3 id="包管理器简介"><a href="#包管理器简介" class="headerlink" title="包管理器简介"></a>包管理器简介</h3><ol>
+<li>apt-get update : 在计算机上更新软件包目录</li>
+<li>apt-get install : 安装一个或多个软件包</li>
+<li>apt-get upgrade : 升级到已安装的所有软件包的最新版本</li>
+<li>apt-get search PATTERN : 在可用的软件包中搜索模式</li>
+<li>apt-get remove PACKAGE : 从计算机中删除或卸载软件包</li>
+</ol>
 
       
 
@@ -266,7 +370,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/18/%E8%AF%95%E8%AF%95/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/18/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -309,7 +413,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#你好"><span class="toc-number">1.</span> <span class="toc-text">你好</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux-常用指令"><span class="toc-number">1.</span> <span class="toc-text">Linux 常用指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#控制台入门"><span class="toc-number">1.1.</span> <span class="toc-text">控制台入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#运行命令"><span class="toc-number">1.1.1.</span> <span class="toc-text">运行命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在文件系统中移动"><span class="toc-number">1.1.2.</span> <span class="toc-text">在文件系统中移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#读取文件"><span class="toc-number">1.1.3.</span> <span class="toc-text">读取文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编辑文件"><span class="toc-number">1.1.4.</span> <span class="toc-text">编辑文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移动和删除文件"><span class="toc-number">1.1.5.</span> <span class="toc-text">移动和删除文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如有任何问题"><span class="toc-number">1.1.6.</span> <span class="toc-text">如有任何问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用户与权限"><span class="toc-number">1.2.</span> <span class="toc-text">用户与权限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建目录"><span class="toc-number">1.2.1.</span> <span class="toc-text">创建目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件权限"><span class="toc-number">1.2.2.</span> <span class="toc-text">文件权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件所有权"><span class="toc-number">1.2.3.</span> <span class="toc-text">文件所有权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sudo"><span class="toc-number">1.2.4.</span> <span class="toc-text">sudo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#过程"><span class="toc-number">1.3.</span> <span class="toc-text">过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#流程"><span class="toc-number">1.3.1.</span> <span class="toc-text">流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#暂停和恢复"><span class="toc-number">1.3.2.</span> <span class="toc-text">暂停和恢复</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#杀死进程"><span class="toc-number">1.3.3.</span> <span class="toc-text">杀死进程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境与定重向"><span class="toc-number">1.4.</span> <span class="toc-text">环境与定重向</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境变量"><span class="toc-number">1.4.1.</span> <span class="toc-text">环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查找并复制"><span class="toc-number">1.4.2.</span> <span class="toc-text">查找并复制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#管道和重定向"><span class="toc-number">1.4.3.</span> <span class="toc-text">管道和重定向</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装软件"><span class="toc-number">1.5.</span> <span class="toc-text">安装软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#从源代码构建软件"><span class="toc-number">1.5.1.</span> <span class="toc-text">从源代码构建软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包管理器简介"><span class="toc-number">1.5.2.</span> <span class="toc-text">包管理器简介</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
