@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>软件测试基础知识（一） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件测试基础知识（一）">
+<meta property="og:url" content="http://yoursite.com/2020/05/26/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-26T03:44:27.347Z">
+<meta property="article:modified_time" content="2020-05-26T06:30:35.446Z">
 <meta property="article:author" content="xiao hui">
 <meta name="twitter:card" content="summary">
   
@@ -152,16 +156,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-软件测试基础知识（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-软件测试基础知识（一）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/26/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/">软件测试基础知识（一）</a>
+    <h1 class="article-title" itemprop="name">
+      软件测试基础知识（一）
     </h1>
   
 
@@ -174,12 +176,60 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试"><a href="#介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试" class="headerlink" title="介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试"></a>介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试</h1>
-        
-          <a class="article-more-a" href="/2020/05/26/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/#more">more >></a>
-        
+        <h1 id="介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试"><a href="#介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试" class="headerlink" title="介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试"></a>介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试</h1><a id="more"></a>
+<ol>
+<li>单元测试：完成最小的软件设计单元（模块）的验证工作，目的是保证模块被正确的编码，使用过程设计描述作为指南,对重要的控制路径进行测试以发现模块内的错误，通常情况下是白盒的，对代码风格和规则、程序设计和结构、业务逻辑等进行静态测试，及早的发现和解决不易显现的错误。</li>
+<li>集成测试：通过测试发现与模块接口有关的问题。目标是把通过了单元测试的模块拿来，构造一个在设计中所描述的程序结构，应当避免一次性的集成（除非软件规模很小），而采用增量集成。<br>自顶向下集成：模块集成的顺序是首先集成主模块，然后按照层次控制结构向下进行集成，隶属于主模块的模块按照深度优先或广度优先的方式集成到整个结构中去。<br>自底向上集成：从原子模块来进行构造和测试，因为模块是自底向上集成的，进行时要求所有隶属于某个给定层次的模块总是存在的，也不再有使用稳定测试桩的必要。</li>
+<li>系统测试：是基于系统整体需求说明书的黑盒类测试，应覆盖系统所有联合的部件。系统测试是针对整个产品系统进行的测试，验证系统是否满足了需求规格的定义，找出与需求规格不相符合或者与之矛盾的地方。系统测试的对象不仅仅包含需要测试的产品系统的软件，还要包含软件所依赖的硬件、外设甚至包括某些数据、某些支持软件及其接口等。因此，必须将系统中的软件与各种依赖的资源结合起来，在系统实际运行环境下来进行测试。</li>
+<li>回归测试：是指在发生修改之后重新测试先前的测试用例以保证修改的正确性。理论上，软件产生新版本，都需要进行回归测试，验证以前发现和修复的错误是否在新软件版本上再次出现。根据修复好了的缺陷再重新进行测试。目的在于验证以前出现过但已经修复好了的缺陷不再重新出现。一般指对某已修正的缺陷再次围绕它原来出现时的步骤重新测试。</li>
+<li>验收测试：是指系统开发生命周期方法论的一个阶段，这时相关的用户或独立测试人员根据测试计划和结果对系统进行测试和接收。它让系统用户决定是否接收系统。它是一项确定产品是否能够满足合同或用户所规定需求的测试。验收测试包括Alpha测试和Beta测试。<br>Alpha测试：是由用户在开发者的场所来进行的，在一个受控的环境中运行。<br>Beta测试：由软件的最终用户在一个或多个用户场所来进行的，开发者通常不在现场，用户记录测试中遇到的问题并报告给开发者，开发者对系统进行最后的修改，并准备发布最终的软件。</li>
+</ol>
+<h1 id="单元测试、集成测试、系统测试、回归测试、验收测试这几步中最重要的是哪一步"><a href="#单元测试、集成测试、系统测试、回归测试、验收测试这几步中最重要的是哪一步" class="headerlink" title="单元测试、集成测试、系统测试、回归测试、验收测试这几步中最重要的是哪一步"></a>单元测试、集成测试、系统测试、回归测试、验收测试这几步中最重要的是哪一步</h1><p>这些测试步骤分别在软件开发的不同阶段对软件进行测试，我认为对软件完整功能进行测试的系统测试很重要，因为此时单元测试和集成测试已经完成，能够对软件所有功能进行功能测试，能够覆盖系统所有联合的部件，是针对整个产品系统进行的测试，能够验证系统是否满足了需求规格的定义，因此我认为系统测试很重要。</p>
+<h1 id="集成测试和系统测试的区别是什么，以及它们的应用场景主要是什么？"><a href="#集成测试和系统测试的区别是什么，以及它们的应用场景主要是什么？" class="headerlink" title="集成测试和系统测试的区别是什么，以及它们的应用场景主要是什么？"></a>集成测试和系统测试的区别是什么，以及它们的应用场景主要是什么？</h1><p>区别：</p>
+<ol>
+<li>计划和用例编制的先后顺序：从v模型来说，在需求阶段就要制定系统测试计划和用例，HLD的时候做集成测试计划和用例，有些公司的具体实践不一样，但顺序肯定是先做系统测试计划用例，再做集成。</li>
+<li>用例的力度：系统测试用例相对更接近用户接受的测试用例，集成测试用例要比系统测试用例更详细，而且接口部分要重点写，毕竟要集成各个模块或者子系统。</li>
+<li>执行测试的顺序：先执行集成测试，待集成测试出的问题修复后，再做系统测试。</li>
+</ol>
+<p>应用场景：</p>
+<ol>
+<li>集成测试：完成单元测试后，各模块联合测试；集中在各模块的接口是否一致，各模块间的数据流和控制流是否按照设计实现其功能、以及结果的正确性验证等等；可以是整个产品的集成测试，也可以是大模块的集成测试；主要是针对程序内部结构进行测试，特别是程序之间的接口进行测试。集成测试对测试人员的编写脚本能力要求比较高。测试方法一般选择黑盒测试和白盒测试相结合。</li>
+<li>系统测试：针对整个产品的全面测试，既包括各模块的验证性测试和功能性测试，又包括对整个产品的健壮性、安全性、可维护性以及各种性能参数的测试。系统测试测试软件《需求规格说明书》中提到的功能是否有遗漏，是否正确的实现。做系统测试要严格按照《需求规格说明书》，以它为标准。测试方法一般采用黑盒测试法。</li>
+</ol>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/Wechat.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -188,16 +238,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/26/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/26/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/21/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">软件测试大纲</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -212,274 +321,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-软件测试大纲" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/21/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/">软件测试大纲</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/21/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/" class="archive-article-date">
-  	<time datetime="2020-05-21T13:39:54.227Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="软件测试的基础理论"><a href="#软件测试的基础理论" class="headerlink" title="软件测试的基础理论"></a>软件测试的基础理论</h1>
-        
-          <a class="article-more-a" href="/2020/05/21/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/21/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试"><span class="toc-number">1.</span> <span class="toc-text">介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#单元测试、集成测试、系统测试、回归测试、验收测试这几步中最重要的是哪一步"><span class="toc-number">2.</span> <span class="toc-text">单元测试、集成测试、系统测试、回归测试、验收测试这几步中最重要的是哪一步</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#集成测试和系统测试的区别是什么，以及它们的应用场景主要是什么？"><span class="toc-number">3.</span> <span class="toc-text">集成测试和系统测试的区别是什么，以及它们的应用场景主要是什么？</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-Linux常用指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/18/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">Linux常用指令</a>
-    </h1>
   
 
-        
-        <a href="/2020/05/18/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2020-05-18T15:03:41.977Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux-常用指令"><a href="#Linux-常用指令" class="headerlink" title="Linux 常用指令"></a>Linux 常用指令</h1>
-        
-          <a class="article-more-a" href="/2020/05/18/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/18/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-markdown编写规则" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/13/markdown%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99/">我的第一篇文章</a>
-    </h1>
   
 
-        
-        <a href="/2020/05/13/markdown%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99/" class="archive-article-date">
-  	<time datetime="2020-05-13T12:48:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="练习markdown编写规格"><a href="#练习markdown编写规格" class="headerlink" title="练习markdown编写规格"></a>练习markdown编写规格</h1>
-        
-          <a class="article-more-a" href="/2020/05/13/markdown%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/13/markdown%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/13/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2020/05/13/hello-world/" class="archive-article-date">
-  	<time datetime="2020-05-13T12:41:17.339Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
-        
-          <a class="article-more-a" href="/2020/05/13/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/13/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -502,8 +369,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
