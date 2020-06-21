@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>堆排序 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="堆排序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="堆排序">
+<meta property="og:url" content="http://yoursite.com/2020/06/21/%E5%A0%86%E6%8E%92%E5%BA%8F/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="堆排序">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/Users/zxh/blog/source/_posts/%E5%A0%86%E6%8E%92%E5%BA%8F.gif">
+<meta property="article:published_time" content="2020-06-21T08:58:43.864Z">
+<meta property="article:modified_time" content="2020-06-21T15:22:47.551Z">
 <meta property="article:author" content="xiao hui">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/Users/zxh/blog/source/_posts/%E5%A0%86%E6%8E%92%E5%BA%8F.gif">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -152,34 +158,92 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-十大排序算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-堆排序" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/19/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">十大排序算法</a>
+    <h1 class="article-title" itemprop="name">
+      堆排序
     </h1>
   
 
         
-        <a href="/2020/06/19/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-06-19T09:41:35.193Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-19</time>
+        <a href="/2020/06/21/%E5%A0%86%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2020-06-21T08:58:43.864Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="十大经典排序算法概述"><a href="#十大经典排序算法概述" class="headerlink" title="十大经典排序算法概述"></a>十大经典排序算法概述</h1>
-        
-          <a class="article-more-a" href="/2020/06/19/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/#more">more >></a>
-        
+        <h1 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h1><a id="more"></a>
+
+<p>堆排序（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。</p>
+<p><strong>图解排序算法之堆排序</strong><br>[堆排序]（<a href="https://www.cnblogs.com/chengxiao/p/6129630.html）" target="_blank" rel="noopener">https://www.cnblogs.com/chengxiao/p/6129630.html）</a></p>
+<p>##算法描述</p>
+<ol>
+<li>将初始待排序关键字序列(R1,R2….Rn)构建成大顶堆，此堆为初始的无序区；</li>
+<li>将堆顶元素R[1]与最后一个元素R[n]交换，此时得到新的无序区(R1,R2,……Rn-1)和新的有序区(Rn),且满足R[1,2…n-1]&lt;=R[n]；</li>
+<li>由于交换后新的堆顶R[1]可能违反堆的性质，因此需要对当前无序区(R1,R2,……Rn-1)调整为新堆，然后再次将R[1]与无序区最后一个元素交换，得到新的无序区(R1,R2….Rn-2)和新的有序区(Rn-1,Rn)。不断重复此过程直到有序区的元素个数为n-1，则整个排序过程完成。</li>
+</ol>
+<p>##动图演示<br><img src="/Users/zxh/blog/source/_posts/%E5%A0%86%E6%8E%92%E5%BA%8F.gif" alt="堆排序"></p>
+<p>##算法复杂度</p>
+<ul>
+<li><p>时间复杂度<br>平均：$O(nlog_2n)$<br>最坏：$O(nlog_2n)$<br>最好：$O(nlog_2n)$</p>
+</li>
+<li><p>空间复杂度<br>$O(1)$</p>
+</li>
+<li><p>不稳定</p>
+</li>
+</ul>
+<p>##代码实现（python）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">def big_endian(arr,start,end):</span><br><span class="line">    root &#x3D; start</span><br><span class="line">    while True:</span><br><span class="line">        child &#x3D; root * 2 + 1</span><br><span class="line">        if child &gt; end:</span><br><span class="line">            break</span><br><span class="line">        if child+1 &lt;&#x3D; end and arr[child] &lt; arr[child+1]:</span><br><span class="line">            child +&#x3D; 1</span><br><span class="line">        if arr[root] &lt; arr[child]:</span><br><span class="line">            arr[root], arr[child] &#x3D; arr[child], arr[root]</span><br><span class="line">            root &#x3D; child</span><br><span class="line">        else:</span><br><span class="line">            break</span><br><span class="line">        </span><br><span class="line">def heap_sort(arr):</span><br><span class="line">    first&#x3D;len(arr) &#x2F;&#x2F; 2 - 1</span><br><span class="line">    for start in range (first, -1, -1):</span><br><span class="line">        big_endian(arr, start, len(arr)-1)</span><br><span class="line">    for end in range (len(arr)-1, 0, -1):</span><br><span class="line">        arr[0], arr[end] &#x3D; arr[end], arr[0]</span><br><span class="line">        big_endian(arr, 0, end-1)</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">lists&#x3D;[30,24,5,58,18]</span><br><span class="line">print(&quot;排序前的序列为：&quot;)</span><br><span class="line">print(lists)</span><br><span class="line">    </span><br><span class="line">heap_sort(lists)</span><br><span class="line"></span><br><span class="line">print(&quot;\n排序后的序列为：&quot;)</span><br><span class="line">print(lists)</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>堆分为大根(顶)堆与小根(顶)堆，升序排序采用大根堆，降序排序采用小根堆。</p>
+</li>
+<li><p>堆是完全二叉树，利用层序遍历(遍历方式还有前中后)映射到数组后，假设树或子树的根节点为arr[root],则其对应的子节点分别为arr[root<em>2+1],arr[root</em>2+2]。</p>
+</li>
+<li><p>对于堆排序，基本思想是，将一个无序序列调整为一个大根堆，就可以找出这个序列的最大值，然后将找出的这个值交换到序列的最后一个，这样有序序列就元素就增加一个，无序序列元素就减少一个。对新的无序序列重复如上的操作，最终会实现排序。即分为两块：1.大根堆的构建。2.首尾元素互换。排序的过程就是每次待排序的序列长度减去1再执行这两步。</p>
+</li>
+<li><p>对于代码的书写理解，第一次构建大根堆，需要从无序序列的树的第一个非叶子节点开始，从下至上，从右至左，对每一个节点进行调整，以构造一个大根堆，此时调用big_endian(arr,first,len(arr)-1)，first利用for递减。交换后得到的树，只有树的根节点不满足大根堆的定义，只需要调整即可，此时调用big_endian(arr,0,end-1)。整体代码是构建大根堆、交换、调整、交换、调整…….</p>
+</li>
+</ol>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/Wechat.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -188,16 +252,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/19/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/21/%E5%A0%86%E6%8E%92%E5%BA%8F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/06/21/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          计数排序
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/06/21/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">快速排序</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -212,602 +344,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-测试实例：用户界面登陆过程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/19/%E6%B5%8B%E8%AF%95%E5%AE%9E%E4%BE%8B%EF%BC%9A%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E7%99%BB%E9%99%86%E8%BF%87%E7%A8%8B/">测试实例：用户界面登陆过程</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/19/%E6%B5%8B%E8%AF%95%E5%AE%9E%E4%BE%8B%EF%BC%9A%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E7%99%BB%E9%99%86%E8%BF%87%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-06-19T03:57:39.303Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="简单用户界面登陆过程都需要做哪些分析"><a href="#简单用户界面登陆过程都需要做哪些分析" class="headerlink" title="简单用户界面登陆过程都需要做哪些分析"></a>简单用户界面登陆过程都需要做哪些分析</h1>
-        
-          <a class="article-more-a" href="/2020/06/19/%E6%B5%8B%E8%AF%95%E5%AE%9E%E4%BE%8B%EF%BC%9A%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E7%99%BB%E9%99%86%E8%BF%87%E7%A8%8B/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/19/%E6%B5%8B%E8%AF%95%E5%AE%9E%E4%BE%8B%EF%BC%9A%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E7%99%BB%E9%99%86%E8%BF%87%E7%A8%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#堆排序"><span class="toc-number">1.</span> <span class="toc-text">堆排序</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-软件测试基础知识（五）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%94%EF%BC%89/">软件测试基础知识（五）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%94%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-30T08:56:07.019Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="测试开发需要哪些知识？需要具备什么能力？"><a href="#测试开发需要哪些知识？需要具备什么能力？" class="headerlink" title="测试开发需要哪些知识？需要具备什么能力？"></a>测试开发需要哪些知识？需要具备什么能力？</h1>
-        
-          <a class="article-more-a" href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%94%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%94%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-软件测试基础知识（四）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%9B%9B%EF%BC%89/">软件测试基础知识（四）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%9B%9B%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-30T08:11:47.719Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="测试与开发需要怎样结合"><a href="#测试与开发需要怎样结合" class="headerlink" title="测试与开发需要怎样结合"></a>测试与开发需要怎样结合</h1>
-        
-          <a class="article-more-a" href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%9B%9B%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%9B%9B%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-软件测试基础知识（三）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/">软件测试基础知识（三）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-30T07:04:27.173Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="手动测试与自动化测试"><a href="#手动测试与自动化测试" class="headerlink" title="手动测试与自动化测试"></a>手动测试与自动化测试</h1>
-        
-          <a class="article-more-a" href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-软件测试基础知识（二）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89/">软件测试基础知识（二）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-30T04:18:07.900Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="黑盒测试与白盒测试"><a href="#黑盒测试与白盒测试" class="headerlink" title="黑盒测试与白盒测试"></a>黑盒测试与白盒测试</h1>
-        
-          <a class="article-more-a" href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/30/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-软件测试基础知识（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/26/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/">软件测试基础知识（一）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/26/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-26T03:44:27.347Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试"><a href="#介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试" class="headerlink" title="介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试"></a>介绍一下：单元测试、集成测试、系统测试、回归测试、验收测试</h1>
-        
-          <a class="article-more-a" href="/2020/05/26/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/26/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-软件测试大纲" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/21/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/">软件测试大纲</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/21/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/" class="archive-article-date">
-  	<time datetime="2020-05-21T13:39:54.227Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="软件测试的基础理论"><a href="#软件测试的基础理论" class="headerlink" title="软件测试的基础理论"></a>软件测试的基础理论</h1>
-        
-          <a class="article-more-a" href="/2020/05/21/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/21/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux常用指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/18/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">Linux常用指令</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/18/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2020-05-18T15:03:41.977Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux-常用指令"><a href="#Linux-常用指令" class="headerlink" title="Linux 常用指令"></a>Linux 常用指令</h1>
-        
-          <a class="article-more-a" href="/2020/05/18/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/18/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-markdown编写规则" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/13/markdown%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99/">我的第一篇文章</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/13/markdown%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99/" class="archive-article-date">
-  	<time datetime="2020-05-13T12:48:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="练习markdown编写规格"><a href="#练习markdown编写规格" class="headerlink" title="练习markdown编写规格"></a>练习markdown编写规格</h1>
-        
-          <a class="article-more-a" href="/2020/05/13/markdown%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/13/markdown%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -830,8 +392,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
